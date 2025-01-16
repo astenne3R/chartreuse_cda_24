@@ -26,6 +26,7 @@ class Cart
      * @var Collection<int, Product>
      */
     #[ORM\ManyToMany(targetEntity: Product::class, mappedBy: 'carts')]
+    
     private Collection $products;
 
     public function __construct()

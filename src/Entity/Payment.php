@@ -14,7 +14,7 @@ class Payment
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $amout = null;
+    private ?int $Amount = null;
 
     #[ORM\Column]
     private ?bool $status = null;
@@ -30,14 +30,14 @@ class Payment
         return $this->id;
     }
 
-    public function getAmout(): ?int
+    public function getAmount(): ?int
     {
-        return $this->amout;
+        return $this->Amount;
     }
 
-    public function setAmout(int $amout): static
+    public function setAmount(int $Amount): static
     {
-        $this->amout = $amout;
+        $this->Amount = $Amount;
 
         return $this;
     }
