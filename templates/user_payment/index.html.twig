@@ -3,18 +3,26 @@
 {% block title %}Hello UserPaymentController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <form method="post" action="{{ path('app_payment_user_checkout') }}" id="payment-form">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        <label for="username">nom</label>
+        <input type="text" name="fullName" id="username" class="form-control" autocomplete="email" required autofocus>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/mater/Documents/symfony/chartreuse_cda_24/src/Controller/UserPaymentController.php</code></li>
-        <li>Your template at <code>C:/Users/mater/Documents/symfony/chartreuse_cda_24/templates/user_payment/index.html.twig</code></li>
-    </ul>
-</div>
+        <label for="username">address</label>
+        <input type="text" name="address" id="username" class="form-control" autocomplete="email" required autofocus>
+
+        <label for="username">code postal</label>
+        <input type="text" name="zipCode" id="username" class="form-control" autocomplete="email" required autofocus>
+
+        <label for="username">ville</label>
+        <input type="text" name="city" id="username" class="form-control" autocomplete="email" required autofocus>
+
+        <label for="username">telephone</label>
+        <input type="text" name="phone" id="username" class="form-control" autocomplete="email" required autofocus>
+
+        <button class="btn btn-lg btn-primary" type="submit">
+            payer
+        </button>
+    </form>
 {% endblock %}
